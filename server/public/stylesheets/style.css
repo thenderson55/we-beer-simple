@@ -7,7 +7,9 @@ body {
 h1 {
   color: pink;
 }
-
+.form-container {
+  margin: 100px 200px;
+}
 a {
   color: #00B7FF;
 }

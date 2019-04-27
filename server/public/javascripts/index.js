@@ -1,17 +1,20 @@
+console.log('hello')
 
-console.log('yay')
+const inputName = document.getElementById("input-name")
+const inputDescription = document.getElementById("input-description")
+const inputAlcohol = document.getElementById("input-alcohol")
+const inputForm = document.getElementById("input-form")
+const submitBtn = document.getElementById("input-btn")
+console.log(inputName)
 
-const getBeers = () => {
-  const beersApi = fetch("http://localhost:3000/api/beers")
-  return beersApi
-    .then((response) => response.json())
-    .then((data) => {
-      return data.map(beer => {
-        console.log(beer.name) 
-      })
-      return console.log(data[5])
-    })
-    
-}
-getBeers()
-
+inputForm.addEventListener("submit", function(e)  {
+  e.preventDefault()
+  console.log('clcked')
+  console.log(input.value)
+})
+// document.addEventListener("click", function()  {
+//   // e.preventDefault()
+//   alert('clicked')
+//   console.log('clcked')
+//   // console.log(input.value)
+// })
