@@ -23,8 +23,12 @@ router.get('/:id', (req, res) => {
 
 router.post("/", (req, res) => {
   // console.log(req)
-  console.log(req.body)
-  res.send(req.body)
+  queries.addBeer(req.body).then((beer) => {
+    res.json(beer)
+  })
+  // console.log(req.body)
+  // console.log(req.body.description)
+  // res.send(req.body)
 })
 
 
