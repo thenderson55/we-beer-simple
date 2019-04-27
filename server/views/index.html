@@ -30,22 +30,22 @@
     <input type="submit" value="Submit">
   </form>
 
-  <form class="ui form form-container" id="input-form">
+  <form class="ui form form-container" action="http://localhost:3000/api/beers" method="post">
     <div class="three fields">
       <div class="field">
         <label>Name</label>
-        <input type="text" class="form-control" id="input-name" placeholder="Name">
+        <input type="text" name="name" class="form-control" id="input-name" placeholder="Name">
       </div>
       <div class="field">
         <label>Description</label>
-        <input type="text" id="input-description" placeholder="Description">
+        <input type="text" name="description" id="input-description" placeholder="Description">
       </div>
       <div class="field">
         <label>Alcohol</label>
-        <input type="number" step="0.01" id="input-alcohol" placeholder="Alcohol">
+        <input type="number" name="alcohol" step="0.01" id="input-alcohol" placeholder="Alcohol">
       </div>
     </div>
-    <button type="submit" class="ui submit button" id="input-btn">Submit</button>
+    <input type="submit" class="ui submit button" id="input-btn">Submit</input>
   </form>
   <script src="../public/javascripts/api.js"></script>
   <script src="../public/javascripts/index.js"></script>
