@@ -19,6 +19,11 @@ router.get('/:id', (req, res) => {
     res.json(beer)
   })
 })
+router.get('/:name', (req, res) => {
+  queries.getOne(req.params.id).then((beer) => {
+    res.json(beer)
+  })
+})
 
 
 router.post("/", (req, res) => {
@@ -32,9 +37,13 @@ router.post("/", (req, res) => {
 })
 
 
-router.delete('/name', (req, res) => {
-  console.log(req.params)
-  res.send(req.params)
+router.delete('/:id', (req, res) => {
+  console.log(req.params.id)
+  console.log(req.body)
+  queries.removeBeer(req.params.id).then(() => 
+  res.json({response: "success"}))
+
+  // res.send(req.query)
   // queries.removeBeer(req.params)
 })
 

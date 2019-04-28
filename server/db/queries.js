@@ -8,7 +8,9 @@ module.exports = {
   getOne(id){
     return knex('beers').where('id', id)
   },
-
+  getOne(name){
+    return knex('beers').where('name', name)
+  },
   addBeer(params){
     const { name, description, alcohol} = params
 
@@ -31,10 +33,10 @@ module.exports = {
     })
   },
 
-  removeBeer(params) {
-    const { name } = params
+  removeBeer(id) {
+    // const id  = params
     return knex('beers')
-    .where({ 'name': name })
+    .where({ 'id': id })
     .del()
   }
 }

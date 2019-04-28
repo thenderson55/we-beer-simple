@@ -46,13 +46,15 @@
     <input type="submit" class="ui submit button" id="input-btn" value="Add" input>
   </form>
 
-  <form class="ui form container" action="http://localhost:3000/api/beers/{{}}" method='post'>
+  <!-- <form class="ui form container" action="http://localhost:3000/api/beers/{{}}" method='post'> -->
+  <form class="ui form container" id="delete-form"> 
     <div class="field">
       <label>Delete a beer</label>
-      <input type='text' name='name' placeholder="Name"></input>
+      <input type='text' id="delete" name='name' placeholder="Name"></input>
     </div>
-    <input type="submit" class="ui submit button" value="Delete">
+    <button onclick="getValue();return false;" class="ui button" value="Delete">Delete</button>
   </form>
+  <!-- onclick="getValue;return false;" -->
 
   <div class="container">
     <button class="ui button">All Beers</button>
