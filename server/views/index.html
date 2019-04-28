@@ -4,90 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-  <link rel="stylesheet" href="../public/stylesheets/style.css">
-  <title>Beer</title>
+  <title>Document</title>
 </head>
 <body>
- 
-
-  <!-- <form action='http://localhost:3000/api/beers' method='post'>
-    <input type='text' name='name'></input>
-    <input type="submit" value="Submit">
-
-  </form>
- 
-
-  <form action="http://localhost:3000/api/beers" method="post">
-    First name:<br>
-    <input type="text" name="firstname" value="Mickey"><br>
-    Last name:<br>
-    <input type="text" name="lastname" value="Mouse"><br><br>
-    <input type="submit" value="Submit">
-  </form> -->
-
-  <form class="ui form container addbeer" action="http://localhost:3000/api/beers" method="post">
-    <div class="three fields">
-      <div class="field">
-        <label>Name</label>
-        <input type="text" name="name" class="form-control" id="input-name" placeholder="Name">
-      </div>
-      <div class="field">
-        <label>Description</label>
-        <input type="text" name="description" id="input-description" placeholder="Description">
-      </div>
-      <div class="field">
-        <label>Alcohol</label>
-        <input type="number" name="alcohol" step="0.01" id="input-alcohol" placeholder="Alcohol">
-      </div>
-    </div>
-    <input type="submit" class="ui submit button" id="input-btn" value="Add" input>
-  </form>
-
-
-  <form class="ui form container" id="edit-form">
-    <div class="three fields">
-      <div class="field">
-        <label>Name</label>
-        <input type="text" name="name" class="form-control" id="edit-name" placeholder="Name">
-      </div>
-      <div class="field">
-        <label>Description</label>
-        <input type="text" name="description" id="edit-description" placeholder="Description">
-      </div>
-      <div class="field">
-        <label>Alcohol</label>
-        <input type="number" name="alcohol" step="0.01" id="edit-alcohol" placeholder="Alcohol">
-      </div>
-    </div>
-    <button onclick="getValues();return false;" class="ui button" value="Delete">Edit</button>
-  </form>
-
-  <!-- <form class="ui form container" action="http://localhost:3000/api/beers/{{}}" method='post'> -->
-  <form class="ui form container" id="delete-form"> 
-    <div class="field">
-      <label>Delete a beer</label>
-      <input type='text' id="delete" name='name' placeholder="Name"></input>
-    </div>
-    <button onclick="getValue();return false;" class="ui button" value="Delete">Delete</button>
-  </form>
-  <!-- onclick="getValue;return false;" -->
-
-  <div class="container getbeer">
-    <button onclick="refreshBeers();return false;" class="ui button">Get Beers</button>
-    <!-- <button onclick="refreshBeers();return false;" class="ui button">Refresh</button> -->
-    <div id="list-beers">
-    </div>
-
-  </div>
-
-
-
-  <script src="../public/javascripts/api.js"></script>
-  <script src="../public/javascripts/index.js"></script>
+  <a href="/server/views/main.html">Main</a>
+  Hello
 </body>
 </html>

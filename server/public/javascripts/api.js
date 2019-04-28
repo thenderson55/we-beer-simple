@@ -8,26 +8,20 @@ const getBeers = () => {
   return beersApi
     .then((response) => response.json())
     .then((data) => {
-      // return data.map(beer => {
-        
-      //   beer.forEach()
-      //   console.log(beer) 
-      // })
       console.log(data)
       data.forEach(beer => {
-        const beerInfo = document.createElement('span')
+        const beerInfo = document.createElement('div')
         const lineBreak = document.createElement('br')
-        beerInfo.innerText = `${beer.name}, ${beer.description}, ${beer.alcohol}.`
+        beerInfo.innerText = `${beer.name}, ${beer.description}, ${beer.alcohol}`
+        beerInfo.classList.add('beer-item')
         beerInfo.append(lineBreak)
-
         beerList.append(beerInfo)
-
       })
     })
     
   }
-  // getBeers()
-const refreshBeers = () => {
+
+  const refreshBeers = () => {
   while (beerList.firstChild) {
     beerList.removeChild(beerList.firstChild);
   }
@@ -61,7 +55,6 @@ const findABeer = (num) => {
     })
 }
 
-// findABeer(4)
 
 
 

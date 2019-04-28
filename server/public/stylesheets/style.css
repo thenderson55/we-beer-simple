@@ -11,10 +11,13 @@ h1 {
   margin: 10px 200px;
 }
 
-
+.beer-item {
+  margin: 10px 0;
+  color: #00B7FF;
+}
 
 .getbeer, .addbeer {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 a {
   color: #00B7FF;
