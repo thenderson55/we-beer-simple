@@ -13,24 +13,7 @@
   <title>Beer</title>
 </head>
 <body>
-    <a href="/server/views/index.html">hey!</a>
-
- 
-
-  <!-- <form action='http://localhost:3000/api/beers' method='post'>
-    <input type='text' name='name'></input>
-    <input type="submit" value="Submit">
-
-  </form>
- 
-
-  <form action="http://localhost:3000/api/beers" method="post">
-    First name:<br>
-    <input type="text" name="firstname" value="Mickey"><br>
-    Last name:<br>
-    <input type="text" name="lastname" value="Mouse"><br><br>
-    <input type="submit" value="Submit">
-  </form> -->
+    <!-- <a href="/server/views/index.html">hey!</a> -->
 
   <form class="ui form container addbeer" action="http://localhost:3000/api/beers" method="post">
     <div class="three fields">
@@ -47,7 +30,7 @@
         <input type="number" name="alcohol" step="0.01" id="input-alcohol" placeholder="Alcohol">
       </div>
     </div>
-    <input type="submit" class="ui submit button" id="input-btn" value="Add" input>
+    <input type="submit" class="ui submit button primary" id="input-btn" value="Add" input>
   </form>
 
 
@@ -66,24 +49,21 @@
         <input type="number" name="alcohol" step="0.01" id="edit-alcohol" placeholder="Alcohol">
       </div>
     </div>
-    <button onclick="getValues();return false;" class="ui button" value="Delete">Edit</button>
+    <button onclick="getValues();return false;" class="ui button primary" value="Delete">Edit</button>
   </form>
 
-  <!-- <form class="ui form container" action="http://localhost:3000/api/beers/{{}}" method='post'> -->
   <form class="ui form container" id="delete-form"> 
     <div class="field">
       <label>Delete a beer</label>
       <input type='text' id="delete" name='name' placeholder="Name"></input>
     </div>
-    <button onclick="getValue();return false;" class="ui button" value="Delete">Delete</button>
+    <button onclick="getValue();return false;" class="ui button primary" value="Delete">Delete</button>
   </form>
-  <!-- onclick="getValue;return false;" -->
 
   <div class="container getbeer">
-    <button onclick="refreshBeers();return false;" class="ui button">Get Beers</button>
-    <!-- <button onclick="refreshBeers();return false;" class="ui button">Refresh</button> -->
+    <button onclick="refreshBeers();return false;" class="ui button primary">Get Beers</button>
     <div id="list-beers">
-    </div>
+  </div>
 
   </div>
 

@@ -1,7 +1,6 @@
 const express = require('express')
 const queries = require('../db/queries')
 
-// const app = express()
 const router  = express.Router()
 router.use(express.json());
 router.use(express.urlencoded()) 
@@ -21,7 +20,6 @@ router.get('/:idOrName', (req, res) => {
 })
 
 router.post("/", (req, res) => {
-  console.log(req)
   queries.addBeer(req.body)
   .then(() => {
     // res.json({response: "success"})
@@ -32,13 +30,11 @@ router.post("/", (req, res) => {
 
 
 router.delete('/:id', (req, res) => {
-  console.log(req.params.id)
   queries.removeBeer(req.params.id).then(() => 
   res.json({response: "success"}))
 })
 
 router.post("/:name", (req, res) => {
-  console.log(req.body.description)
   queries.editBeer(req.body).then(() =>{
     res.json({response: "success"})
   })
