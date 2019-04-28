@@ -12,7 +12,6 @@ module.exports = {
     return knex('beers').where('name', idOrName)
   },
 
-
   addBeer(params){
     const { name, description, alcohol} = params
     return knex('beers')
@@ -52,10 +51,4 @@ module.exports = {
     .update('description', description)
     .update('alcohol', alcohol)
   }
-  // removeBeerByName(name) {
-  //   // const id  = params
-  //   return knex('beers')
-  //   .where({ 'name': name })
-  //   .del()
-  // }
 }

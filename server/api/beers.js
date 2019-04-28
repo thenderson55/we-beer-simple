@@ -6,7 +6,6 @@ router.use(express.json());
 router.use(express.urlencoded()) 
 
 
-
 router.get("/", (req, res) => {
   queries.getAll().then((beers) => {
     res.json(beers)
@@ -28,7 +27,6 @@ router.post("/", (req, res) => {
   })
 })
 
-
 router.delete('/:id', (req, res) => {
   queries.removeBeer(req.params.id).then(() => 
   res.json({response: "success"}))
@@ -39,16 +37,5 @@ router.post("/:name", (req, res) => {
     res.json({response: "success"})
   })
 })
-
-// router.delete('/:name', (req, res) => {
-//   console.log(req.params.name)
-//   console.log(req.body)
-//   queries.removeBeerByName(req.params.name).then(() => 
-//   res.json({response: "success"}))
-
-//   // res.send(req.query)
-//   // queries.removeBeer(req.params)
-// })
-
 
 module.exports = router

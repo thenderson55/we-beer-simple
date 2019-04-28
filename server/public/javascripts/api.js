@@ -12,7 +12,7 @@ const getBeers = () => {
       data.forEach(beer => {
         const beerInfo = document.createElement('div')
         const lineBreak = document.createElement('br')
-        beerInfo.innerText = `${beer.name}, ${beer.description}, ${beer.alcohol}`
+        beerInfo.innerText = `${beer.name}, ${beer.description} ${beer.alcohol}`
         beerInfo.classList.add('beer-item')
         beerInfo.append(lineBreak)
         beerList.append(beerInfo)
