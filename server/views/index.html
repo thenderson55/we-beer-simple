@@ -28,7 +28,7 @@
     <input type="submit" value="Submit">
   </form> -->
 
-  <form class="ui form form-container" action="http://localhost:3000/api/beers" method="post">
+  <form class="ui form container" action="http://localhost:3000/api/beers" method="post">
     <div class="three fields">
       <div class="field">
         <label>Name</label>
@@ -43,8 +43,27 @@
         <input type="number" name="alcohol" step="0.01" id="input-alcohol" placeholder="Alcohol">
       </div>
     </div>
-    <input type="submit" class="ui submit button" id="input-btn"></input>
+    <input type="submit" class="ui submit button" id="input-btn" value="Add" input>
   </form>
+
+  <form class="ui form container" action="http://localhost:3000/api/beers/{{}}" method='post'>
+    <div class="field">
+      <label>Delete a beer</label>
+      <input type='text' name='name' placeholder="Name"></input>
+    </div>
+    <input type="submit" class="ui submit button" value="Delete">
+  </form>
+
+  <div class="container">
+    <button class="ui button">All Beers</button>
+    <div id="list-beers">
+  
+    </div>
+
+  </div>
+
+
+
   <script src="../public/javascripts/api.js"></script>
   <script src="../public/javascripts/index.js"></script>
 </body>

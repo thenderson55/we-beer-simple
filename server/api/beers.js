@@ -23,12 +23,19 @@ router.get('/:id', (req, res) => {
 
 router.post("/", (req, res) => {
   // console.log(req)
-  queries.addBeer(req.body).then((beer) => {
-    res.json(beer)
-  })
+  // queries.addBeer(req.body).then((beer) => {
+  //   res.json(beer)
+  // })
   // console.log(req.body)
   // console.log(req.body.description)
   // res.send(req.body)
+})
+
+
+router.delete('/name', (req, res) => {
+  console.log(req.params)
+  res.send(req.params)
+  // queries.removeBeer(req.params)
 })
 
 

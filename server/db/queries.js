@@ -29,5 +29,12 @@ module.exports = {
       //   throw err;
       // })
     })
+  },
+
+  removeBeer(params) {
+    const { name } = params
+    return knex('beers')
+    .where({ 'name': name })
+    .del()
   }
 }

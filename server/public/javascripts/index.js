@@ -7,6 +7,7 @@ const inputForm = document.getElementById("input-form")
 const submitBtn = document.getElementById("input-btn")
 // console.log(inputName)
 
+
 // inputForm.addEventListener("submit", function(e)  {
 //   e.preventDefault()
 //   console.log('clcked')
