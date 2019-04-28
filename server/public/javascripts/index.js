@@ -17,21 +17,21 @@ function getValue() {
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
   xhr.send(`id=${beerName}`)
 }
-function getValues() {
-  const name = editName.value
-  const description = editDescription.value
-  const alcohol = editAlcohol.value
-  const url = `http://localhost:3000/api/beers/${name}`
-  axios({
-    method: 'post',
-    url: url,
-    data: {
-      name: name,
-      description: description,
-      alcohol: alcohol
-    }
-  });
-}
+// function getValues() {
+//   const name = editName.value
+//   const description = editDescription.value
+//   const alcohol = editAlcohol.value
+//   const url = `http://localhost:3000/api/beers/${name}`
+//   axios({
+//     method: 'post',
+//     url: url,
+//     data: {
+//       name: name,
+//       description: description,
+//       alcohol: alcohol
+//     }
+//   });
+// }
 
 
 

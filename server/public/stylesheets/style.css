@@ -8,7 +8,13 @@ h1 {
   color: pink;
 }
 .container {
-  margin: 100px 200px;
+  margin: 10px 200px;
+}
+
+
+
+.getbeer, .addbeer {
+  margin-top: 50px;
 }
 a {
   color: #00B7FF;

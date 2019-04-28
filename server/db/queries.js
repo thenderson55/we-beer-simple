@@ -5,15 +5,16 @@ module.exports = {
     return knex('beers')
   },
 
-  getOne(id){
-    return knex('beers').where('id', id)
+  getOne(idOrName){
+    if (!isNaN(idOrName)) {
+      return knex('beers').where('id', idOrName)
+    } 
+    return knex('beers').where('name', idOrName)
   },
-  getOne(name){
-    return knex('beers').where('name', name)
-  },
+
+
   addBeer(params){
     const { name, description, alcohol} = params
-
     return knex('beers')
       .insert({ 'name': name, 'description': description, 'alcohol': parseFloat(alcohol)})
       .then(() => {
@@ -33,10 +34,14 @@ module.exports = {
     })
   },
 
-  removeBeer(id) {
-
+  removeBeer(idOrName) {
+    if (!isNaN(idOrName)) {
+      return knex('beers')
+    .where({ 'id': idOrName })
+    .del()
+    } 
     return knex('beers')
-    .where({ 'id': id })
+    .where({ 'name': idOrName })
     .del()
   },
 

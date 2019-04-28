@@ -30,7 +30,7 @@
     <input type="submit" value="Submit">
   </form> -->
 
-  <form class="ui form container" action="http://localhost:3000/api/beers" method="post">
+  <form class="ui form container addbeer" action="http://localhost:3000/api/beers" method="post">
     <div class="three fields">
       <div class="field">
         <label>Name</label>
@@ -77,10 +77,10 @@
   </form>
   <!-- onclick="getValue;return false;" -->
 
-  <div class="container">
-    <button class="ui button">All Beers</button>
+  <div class="container getbeer">
+    <button onclick="refreshBeers();return false;" class="ui button">Get Beers</button>
+    <!-- <button onclick="refreshBeers();return false;" class="ui button">Refresh</button> -->
     <div id="list-beers">
-  
     </div>
 
   </div>

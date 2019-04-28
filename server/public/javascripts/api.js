@@ -25,8 +25,32 @@ const getBeers = () => {
       })
     })
     
+  }
+  // getBeers()
+const refreshBeers = () => {
+  while (beerList.firstChild) {
+    beerList.removeChild(beerList.firstChild);
+  }
+  getBeers()
 }
-getBeers()
+
+function getValues() {
+  const name = editName.value
+  const description = editDescription.value
+  const alcohol = editAlcohol.value
+  const url = `http://localhost:3000/api/beers/${name}`
+  axios({
+    method: 'post',
+    url: url,
+    data: {
+      name: name,
+      description: description,
+      alcohol: alcohol
+    }
+  });
+  setTimeout(refreshBeers, 100) 
+}
+
 
 const findABeer = (num) => {
   const beerApi = fetch(`http://localhost:3000/api/beers/${num}`)

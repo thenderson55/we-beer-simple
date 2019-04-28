@@ -14,18 +14,11 @@ router.get("/", (req, res) => {
   })
 })
   
-router.get('/:id', (req, res) => {
-  queries.getOne(req.params.id).then((beer) => {
-    res.json(beer)
-  })
-
-})
-router.get('/:name', (req, res) => {
-  queries.getOne(req.params.id).then((beer) => {
-    res.json(beer)
+router.get('/:idOrName', (req, res) => {
+  queries.getOne(req.params.idOrName).then((beer) => {
+    res.json(beer[0])
   })
 })
-
 
 router.post("/", (req, res) => {
   console.log(req)
