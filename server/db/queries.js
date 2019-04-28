@@ -34,9 +34,23 @@ module.exports = {
   },
 
   removeBeer(id) {
-    // const id  = params
+
     return knex('beers')
     .where({ 'id': id })
     .del()
+  },
+
+  editBeer(params) {
+    const { name, description, alcohol} = params
+    return knex('beers')
+    .where({'name': name})
+    .update('description', description)
+    .update('alcohol', alcohol)
   }
+  // removeBeerByName(name) {
+  //   // const id  = params
+  //   return knex('beers')
+  //   .where({ 'name': name })
+  //   .del()
+  // }
 }

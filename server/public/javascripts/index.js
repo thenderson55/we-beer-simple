@@ -1,18 +1,13 @@
-console.log('hello')
-
-const inputName = document.getElementById("input-name")
-const inputDescription = document.getElementById("input-description")
-const inputAlcohol = document.getElementById("input-alcohol")
-const inputForm = document.getElementById("input-form")
-const submitBtn = document.getElementById("input-btn")
+// const inputName = document.getElementById("input-name")
+// const inputDescription = document.getElementById("input-description")
+// const inputAlcohol = document.getElementById("input-alcohol")
+const editName = document.getElementById("edit-name")
+const editDescription = document.getElementById("edit-description")
+const editAlcohol = document.getElementById("edit-alcohol")
+// const inputForm = document.getElementById("input-form")
+// const submitBtn = document.getElementById("input-btn")
 const deleteForm = document.getElementById("delete")
-// console.log(inputName)
 
-// $(document).ready(function() {
-//   $('.delete-btn').on('click', function(e){
-    
-//   })
-// })
 
 function getValue() {
   console.log(deleteForm.value)
@@ -21,33 +16,23 @@ function getValue() {
   xhr.open("delete", `http://localhost:3000/api/beers/${beerName}`)
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
   xhr.send(`id=${beerName}`)
-//   $http({
-//     method: "POST",
-//     url: `http://localhost:3000/api/users/${
-//       beerName
-//     }`,
-//     data: { username: "bob"},
-//     headers: { "Content-Type": "application/json" },
-//   }).then((response) => {
-//     console.log(response)
-//     // $scope.currentMessages = response.data;
-//     // $("#messageArea")[0].value = "";
-//   });
+}
+function getValues() {
+  const name = editName.value
+  const description = editDescription.value
+  const alcohol = editAlcohol.value
+  const url = `http://localhost:3000/api/beers/${name}`
+  axios({
+    method: 'post',
+    url: url,
+    data: {
+      name: name,
+      description: description,
+      alcohol: alcohol
+    }
+  });
 }
 
 
-// deleteForm.addEventListener("submit", (e) => {
-//   e.preventDefault()
-//   console.log(input.value)
-// })
-// inputForm.addEventListener("submit", function(e)  {
-//   e.preventDefault()
-//   console.log('clcked')
-//   console.log(input.value)
-// })
-// document.addEventListener("click", function()  {
-//   // e.preventDefault()
-//   alert('clicked')
-//   console.log('clcked')
-//   // console.log(input.value)
-// })
+
+
